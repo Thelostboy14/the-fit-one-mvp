@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE FIT ONE — Train Hard. Look The Part.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-zinc-950 text-white antialiased selection:bg-[#d4ff00] selection:text-zinc-950">
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl tracking-wider uppercase flex items-center gap-1.5">
+        <span class="text-white">THE</span>
+        <span class="text-[#d4ff00]">FIT</span>
+        <span class="text-white">ONE</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-zinc-300">
+        <a href="shop.html" class="hover:text-[#d4ff00] transition-colors">Shop</a>
+        <a href="#bundle" class="hover:text-[#d4ff00] transition-colors">Bundles</a>
+        <a href="#quiz" class="hover:text-[#d4ff00] transition-colors">Programs</a>
+        <a href="#reviews" class="hover:text-[#d4ff00] transition-colors">Results</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="shop.html" class="relative inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 hover:border-[#d4ff00] px-3.5 py-2 rounded-sm text-xs font-bold uppercase tracking-wider transition-colors">
+          <span>Store</span>
+          <span id="nav-cart-count" class="bg-[#d4ff00] text-zinc-950 font-extrabold px-2 py-0.5 rounded-full text-[11px]">0</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="md:hidden text-zinc-200 hover:text-[#d4ff00]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-4 space-y-2 text-sm font-semibold uppercase tracking-wider">
+      <a href="shop.html" class="block py-1 text-zinc-200 hover:text-[#d4ff00]">Shop</a>
+      <a href="#bundle" class="block py-1 text-zinc-200 hover:text-[#d4ff00]">Bundles</a>
+      <a href="#quiz" class="block py-1 text-zinc-200 hover:text-[#d4ff00]">Programs</a>
+      <a href="#reviews" class="block py-1 text-zinc-200 hover:text-[#d4ff00]">Results</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (STRICTLY 2 LINES) ==================== -->
+  <section class="relative overflow-hidden bg-zinc-950 border-b border-zinc-900">
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-50 scale-105"
+      style="background-image: url('assets/images/hero-basketball.jpg');"
+      data-fallback-bg="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1800&q=80"
+    ></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/85 to-zinc-950/35"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/50"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="max-w-3xl space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-[11px] font-bold tracking-widest uppercase text-zinc-200">
+          <span class="w-2 h-2 rounded-full bg-[#d4ff00] animate-pulse"></span>
+          <span>India's Performance Brand &bull; @Thefitone_14</span>
+        </div>
+
+        <!-- Strictly 2 Lines -->
+        <h1 class="font-display uppercase tracking-tight text-5xl sm:text-7xl md:text-8xl leading-[0.96]">
+          <span class="block text-white whitespace-nowrap">TRAIN HARD.</span>
+          <span class="block text-[#d4ff00] whitespace-nowrap">LOOK THE PART.</span>
+        </h1>
+
+        <p class="text-zinc-300 text-base sm:text-lg max-w-xl leading-relaxed">
+          Minimalist gym &amp; court essentials, structured workout splits, and body recomposition guides built for serious execution.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="shop.html" class="group inline-flex items-center gap-2 bg-[#d4ff00] text-zinc-950 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-sm hover:bg-[#c2eb00] transition-all">
+            <span>Shop Apparel &amp; Gear</span>
+            <span class="transition-transform group-hover:translate-x-1">&gt;</span>
+          </a>
+          <a href="#quiz" class="inline-flex items-center justify-center bg-zinc-900/90 border border-zinc-700 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-sm hover:border-[#d4ff00] hover:text-[#d4ff00] transition-colors">
+            Find Your Program
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <section class="bg-zinc-900/90 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-bold uppercase tracking-wider text-zinc-200">
+      <div class="flex items-center justify-center lg:justify-start gap-2.5">
+        <span class="text-[#d4ff00]">&#10003;</span>
+        <span>Free Delivery &#8377;999+</span>
+      </div>
+      <div class="flex items-center justify-center lg:justify-start gap-2.5">
+        <span class="text-[#d4ff00]">&#9889;</span>
+        <span>Instant Digital Access</span>
+      </div>
+      <div class="flex items-center justify-center lg:justify-start gap-2.5">
+        <span class="text-[#d4ff00]">&#8634;</span>
+        <span>30-Day Returns</span>
+      </div>
+      <div class="flex items-center justify-center lg:justify-start gap-2.5">
+        <span class="text-[#d4ff00]">&#9733;</span>
+        <span>India-Made Quality</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOP BY CATEGORY (BENTO GRID) ==================== -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-[#d4ff00] mb-1">Core Lineup</p>
+        <h2 class="font-display text-3xl sm:text-5xl uppercase tracking-wide text-white">Shop By Category</h2>
+      </div>
+      <a href="shop.html" class="text-xs font-bold uppercase tracking-wider text-zinc-400 hover:text-[#d4ff00] transition-colors">
+        Open Full Shop &rarr;
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <a href="shop.html?cat=Apparel" class="group relative md:row-span-2 min-h-[280px] md:min-h-[460px] rounded-md overflow-hidden border border-zinc-800 bg-zinc-900 flex flex-col justify-end p-6">
+        <img src="assets/images/cat-apparel.jpg" data-fallback-src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1000&q=80" alt="Apparel" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">Hoodies &bull; Tees &bull; Streetwear</p>
+          <h3 class="font-display text-3xl uppercase text-white mt-1">Apparel</h3>
+          <span class="inline-block mt-2 text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-[#d4ff00]">Shop Now &gt;</span>
+        </div>
+      </a>
+
+      <a href="shop.html?cat=Equipment" class="group relative min-h-[220px] rounded-md overflow-hidden border border-zinc-800 bg-zinc-900 flex flex-col justify-end p-6">
+        <img src="assets/images/cat-equipment.jpg" data-fallback-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=80" alt="Equipment" class="absolute inset-0 w-full h-full object-cover opacity-65 group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">Shakers &bull; Grips &bull; Gear</p>
+          <h3 class="font-display text-2xl uppercase text-white mt-1">Equipment</h3>
+          <span class="inline-block mt-1.5 text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-[#d4ff00]">Shop Now &gt;</span>
+        </div>
+      </a>
+
+      <a href="shop.html?cat=Workout%20Splits" class="group relative min-h-[220px] rounded-md overflow-hidden border border-zinc-800 bg-zinc-900 flex flex-col justify-end p-6">
+        <img src="assets/images/cat-splits.jpg" data-fallback-src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80" alt="Workout Splits" class="absolute inset-0 w-full h-full object-cover opacity-65 group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">4, 5 &amp; 6-Day Splits</p>
+          <h3 class="font-display text-2xl uppercase text-white mt-1">Workout Splits</h3>
+          <span class="inline-block mt-1.5 text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-[#d4ff00]">Explore Splits &gt;</span>
+        </div>
+      </a>
+
+      <a href="shop.html?cat=Recomp%20Plans" class="group relative md:col-span-2 min-h-[220px] rounded-md overflow-hidden border border-zinc-800 bg-zinc-900 flex flex-col justify-end p-6">
+        <img src="assets/images/cat-recomp.jpg" data-fallback-src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80" alt="Body Recomposition Plans" class="absolute inset-0 w-full h-full object-cover opacity-65 group-hover:scale-105 transition-transform duration-500" />
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent"></div>
+        <div class="relative z-10">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">Structured Training + Nutrition</p>
+          <h3 class="font-display text-2xl sm:text-3xl uppercase text-white mt-1">Body Recomposition Plans</h3>
+          <span class="inline-block mt-1.5 text-xs font-bold uppercase tracking-wider text-zinc-200 group-hover:text-[#d4ff00]">Shop Plans &gt;</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== BUILD YOUR BUNDLE (15% OFF + UPI / QR / WHATSAPP) ==================== -->
+  <section id="bundle" class="bg-zinc-900/60 border-y border-zinc-800/90 py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-[#d4ff00] mb-2">MVP Stack</p>
+      <h2 class="font-display text-3xl sm:text-5xl uppercase tracking-wide text-white">
+        Build Your Bundle &mdash; <span class="text-[#d4ff00]">Save 15%</span>
+      </h2>
+      <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+        Pick 2+ items to unlock automatic 15% savings. Pay via UPI (m211911114@ybl) or confirm order on WhatsApp.
+      </p>
+
+      <div id="bundle-items" class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 text-left"></div>
+
+      <div class="mt-10 flex flex-col items-center gap-3">
+        <div class="flex items-baseline gap-3">
+          <span id="bundle-original" class="text-zinc-500 line-through text-lg font-semibold"></span>
+          <span id="bundle-final" class="font-display text-4xl sm:text-5xl text-white"></span>
+        </div>
+        <span id="bundle-savings" class="inline-block bg-[#d4ff00]/15 border border-[#d4ff00]/40 text-[#d4ff00] text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full"></span>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-3">
+          <button id="bundle-whatsapp-btn" type="button" class="inline-flex items-center gap-2 bg-[#d4ff00] text-zinc-950 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-sm hover:bg-[#c2eb00] transition-all">
+            <span>Order Bundle on WhatsApp</span>
+            <span>&gt;</span>
+          </button>
+          <a id="bundle-upi-link" href="#" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-sm hover:border-[#d4ff00] hover:text-[#d4ff00] transition-colors">
+            <span>Pay via UPI App</span>
+          </a>
+          <button id="bundle-qr-toggle" type="button" class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-sm hover:border-[#d4ff00] hover:text-[#d4ff00] transition-colors">
+            <span>Show UPI QR</span>
+          </button>
+        </div>
+
+        <div id="bundle-qr-box" class="hidden mt-3 bg-zinc-950 border border-zinc-800 rounded p-4 flex flex-col items-center gap-2">
+          <img src="assets/images/upi-qr.jpg" alt="PhonePe UPI QR Code" class="w-40 h-auto rounded border border-zinc-700" />
+          <p class="text-xs text-zinc-300">UPI ID: <strong class="text-[#d4ff00]">m211911114@ybl</strong></p>
+        </div>
+
+        <p id="bundle-status" class="text-xs text-[#d4ff00] font-semibold min-h-[1rem]"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3-QUESTION PROGRAM FINDER ==================== -->
+  <section id="quiz" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="inline-block bg-[#d4ff00]/15 border border-[#d4ff00]/35 text-[#d4ff00] text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+        3 Quick Questions
+      </span>
+      <h2 class="font-display text-3xl sm:text-5xl uppercase tracking-wide text-white">Find Your Perfect Program</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-md p-5 space-y-3">
+        <div class="flex items-center gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-[#d4ff00] text-zinc-950 text-xs font-extrabold flex items-center justify-center">1</span>
+          <h3 class="font-bold text-sm uppercase tracking-wide text-white">Primary Goal</h3>
+        </div>
+        <div class="space-y-2" data-quiz-group="goal">
+          <button type="button" data-value="Body Recomposition" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">Body Recomposition (Lean + Muscle)</button>
+          <button type="button" data-value="Build Muscle" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">Build Muscle &amp; Strength</button>
+          <button type="button" data-value="Fat Loss" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">Fat Loss &amp; Conditioning</button>
+        </div>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 rounded-md p-5 space-y-3">
+        <div class="flex items-center gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-[#d4ff00] text-zinc-950 text-xs font-extrabold flex items-center justify-center">2</span>
+          <h3 class="font-bold text-sm uppercase tracking-wide text-white">Days Per Week</h3>
+        </div>
+        <div class="space-y-2" data-quiz-group="days">
+          <button type="button" data-value="3-4 Days" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">3&ndash;4 Days / Week</button>
+          <button type="button" data-value="5 Days" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">5 Days (Hybrid Split)</button>
+          <button type="button" data-value="6 Days" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">6 Days (High Volume)</button>
+        </div>
+      </div>
+
+      <div class="bg-zinc-900 border border-zinc-800 rounded-md p-5 space-y-3">
+        <div class="flex items-center gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-[#d4ff00] text-zinc-950 text-xs font-extrabold flex items-center justify-center">3</span>
+          <h3 class="font-bold text-sm uppercase tracking-wide text-white">Equipment Access</h3>
+        </div>
+        <div class="space-y-2" data-quiz-group="equipment">
+          <button type="button" data-value="Full Gym" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">Full Commercial Gym</button>
+          <button type="button" data-value="Home & Dumbbells" class="quiz-option w-full text-left px-4 py-3 rounded border border-zinc-700 bg-zinc-950/70 text-sm font-medium text-zinc-200">Home Setup / Dumbbells</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <button id="show-program-btn" type="button" class="hidden inline-flex items-center gap-2 bg-[#d4ff00] text-zinc-950 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-sm hover:bg-[#c2eb00] transition-all">
+        Show My Program &gt;
+      </button>
+
+      <div id="quiz-result" class="hidden max-w-2xl mx-auto mt-6 bg-zinc-900 border border-[#d4ff00]/50 rounded-md p-6 text-left space-y-3">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">Recommended Match</p>
+        <h3 id="result-title" class="font-display text-2xl sm:text-3xl uppercase text-white"></h3>
+        <p id="result-desc" class="text-sm text-zinc-300 leading-relaxed"></p>
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a id="result-link" href="assets/docs/5-Day-Hybrid-Split.pdf" target="_blank" class="inline-flex items-center gap-2 bg-[#d4ff00] text-zinc-950 font-extrabold text-xs uppercase tracking-wider px-5 py-3 rounded-sm hover:bg-[#c2eb00]">
+            Access Program Guide &gt;
+          </a>
+          <button id="reset-quiz-btn" type="button" class="text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-white underline">
+            Reset Selections
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REAL RESULTS ==================== -->
+  <section id="reviews" class="bg-zinc-900/50 border-t border-zinc-800/80 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-[#d4ff00] mb-1">Community Proof</p>
+        <h2 class="font-display text-3xl sm:text-5xl uppercase tracking-wide text-white">
+          Real <span class="text-[#d4ff00]">Results</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-zinc-900 border border-zinc-800 rounded-md p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <img src="assets/images/review-1.jpg" data-fallback-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Rohan Verma" class="w-11 h-11 rounded-full object-cover border border-zinc-700" />
+              <div>
+                <h3 class="font-bold text-sm text-white">Rohan Verma</h3>
+                <p class="text-xs text-zinc-400">New Delhi</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#d4ff00]/15 text-[#d4ff00] border border-[#d4ff00]/30">&#10003; Verified</span>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed">"The 5-day hybrid split kept my morning gym sessions sharp and sustainable without burning out."</p>
+        </article>
+
+        <article class="bg-zinc-900 border border-zinc-800 rounded-md p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <img src="assets/images/review-2.jpg" data-fallback-src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Arjun Mehta" class="w-11 h-11 rounded-full object-cover border border-zinc-700" />
+              <div>
+                <h3 class="font-bold text-sm text-white">Arjun Mehta</h3>
+                <p class="text-xs text-zinc-400">Mumbai</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#d4ff00]/15 text-[#d4ff00] border border-[#d4ff00]/30">&#10003; Verified</span>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed">"Lost 8kg in 3 months. Super structured — no guesswork, just consistent execution."</p>
+        </article>
+
+        <article class="bg-zinc-900 border border-zinc-800 rounded-md p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <img src="assets/images/review-3.jpg" data-fallback-src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Priya Sharma" class="w-11 h-11 rounded-full object-cover border border-zinc-700" />
+              <div>
+                <h3 class="font-bold text-sm text-white">Priya Sharma</h3>
+                <p class="text-xs text-zinc-400">Bengaluru</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#d4ff00]/15 text-[#d4ff00] border border-[#d4ff00]/30">&#10003; Verified</span>
+          </div>
+          <p class="text-sm text-zinc-300 leading-relaxed">"Simple nutrition rules, clear progressions, and clean gear."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="footer" class="bg-zinc-950 border-t border-zinc-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+      <p>&copy; 2026 The Fit One (@Thefitone_14). All rights reserved.</p>
+      <div class="flex items-center gap-5">
+        <a href="shop.html" class="hover:text-[#d4ff00]">Shop</a>
+        <a href="https://instagram.com/Thefitone_14" target="_blank" rel="noopener noreferrer" class="hover:text-[#d4ff00]">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

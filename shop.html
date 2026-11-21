@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHOP — THE FIT ONE | Apparel, Gear &amp; Plans</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-zinc-950 text-white antialiased selection:bg-[#d4ff00] selection:text-zinc-950">
+
+  <header class="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-display text-2xl tracking-wider uppercase flex items-center gap-1.5">
+        <span class="text-white">THE</span>
+        <span class="text-[#d4ff00]">FIT</span>
+        <span class="text-white">ONE</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-zinc-300">
+        <a href="index.html" class="hover:text-[#d4ff00] transition-colors">Home</a>
+        <a href="#catalog" class="text-[#d4ff00]">Shop</a>
+        <a href="index.html#bundle" class="hover:text-[#d4ff00] transition-colors">Bundles</a>
+        <a href="index.html#quiz" class="hover:text-[#d4ff00] transition-colors">Programs</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button id="open-cart-btn" type="button" class="relative inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 hover:border-[#d4ff00] px-3.5 py-2 rounded-sm text-xs font-bold uppercase tracking-wider transition-colors">
+          <span>Cart</span>
+          <span id="cart-badge" class="bg-[#d4ff00] text-zinc-950 font-extrabold px-2 py-0.5 rounded-full text-[11px]">0</span>
+        </button>
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="md:hidden text-zinc-200 hover:text-[#d4ff00]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-4 space-y-2 text-sm font-semibold uppercase tracking-wider">
+      <a href="index.html" class="block py-1 text-zinc-300 hover:text-[#d4ff00]">Home</a>
+      <a href="#catalog" class="block py-1 text-[#d4ff00]">Shop</a>
+      <a href="index.html#bundle" class="block py-1 text-zinc-300 hover:text-[#d4ff00]">Bundles</a>
+      <a href="index.html#quiz" class="block py-1 text-zinc-300 hover:text-[#d4ff00]">Programs</a>
+    </div>
+  </header>
+
+  <section class="bg-zinc-950 border-b border-zinc-900 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+      <div class="space-y-3">
+        <p class="text-xs font-bold uppercase tracking-widest text-[#d4ff00]">Complete MVP Storefront &bull; @Thefitone_14</p>
+        <h1 class="font-display text-4xl sm:text-6xl uppercase tracking-tight leading-none text-white">
+          THE FIT ONE <span class="text-[#d4ff00]">SHOP</span>
+        </h1>
+        <p class="text-zinc-400 text-sm sm:text-base max-w-2xl">
+          Scan PhonePe QR or pay via UPI (m211911114@ybl), Cash on Delivery (gear/apparel), or confirm directly on WhatsApp.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+        <input id="shop-search" type="text" placeholder="Search products..." class="bg-zinc-900 border border-zinc-700 focus:border-[#d4ff00] outline-none rounded-sm px-4 py-2.5 text-sm text-white placeholder:text-zinc-500 sm:w-64" />
+        <select id="shop-sort" class="bg-zinc-900 border border-zinc-700 focus:border-[#d4ff00] outline-none rounded-sm px-3.5 py-2.5 text-sm text-zinc-200">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div id="category-filters" class="flex flex-wrap items-center gap-2.5 mb-8">
+      <button type="button" data-category="All" class="filter-btn active px-4 py-2 rounded-sm text-xs font-extrabold uppercase tracking-wider border border-[#d4ff00] bg-[#d4ff00] text-zinc-950 transition-colors">All Products</button>
+      <button type="button" data-category="Apparel" class="filter-btn px-4 py-2 rounded-sm text-xs font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#d4ff00] transition-colors">Apparel</button>
+      <button type="button" data-category="Equipment" class="filter-btn px-4 py-2 rounded-sm text-xs font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#d4ff00] transition-colors">Equipment</button>
+      <button type="button" data-category="Workout Splits" class="filter-btn px-4 py-2 rounded-sm text-xs font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#d4ff00] transition-colors">Workout Splits</button>
+      <button type="button" data-category="Recomp Plans" class="filter-btn px-4 py-2 rounded-sm text-xs font-bold uppercase tracking-wider border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-[#d4ff00] transition-colors">Recomp Plans</button>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <p id="empty-state" class="hidden text-center text-zinc-400 py-12 text-sm">No matching products found.</p>
+  </section>
+
+  <!-- Cart Drawer with PhonePe QR + UPI + COD + WhatsApp -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+    <div id="cart-backdrop" class="absolute inset-0 bg-black/75"></div>
+    <aside class="absolute right-0 top-0 h-full w-full max-w-md bg-zinc-950 border-l border-zinc-800 flex flex-col justify-between p-6 overflow-y-auto">
+      <div class="space-y-4">
+        <div class="flex items-center justify-between pb-4 border-b border-zinc-800">
+          <h2 class="font-display text-2xl uppercase tracking-wide text-white">Your <span class="text-[#d4ff00]">Cart</span></h2>
+          <button id="close-cart-btn" type="button" class="text-xs font-bold uppercase tracking-wider text-zinc-400 hover:text-white px-2 py-1">Close &times;</button>
+        </div>
+        <div id="cart-items" class="space-y-3"></div>
+
+        <!-- Payment Method Selector -->
+        <div class="bg-zinc-900/90 border border-zinc-800 rounded p-3.5 space-y-2.5">
+          <p class="text-[11px] font-bold uppercase tracking-widest text-[#d4ff00]">Select Payment Method</p>
+          <div class="grid grid-cols-3 gap-2 text-[11px] font-bold uppercase">
+            <button type="button" data-pay-method="UPI" class="pay-method-btn active py-2 px-2 rounded border border-[#d4ff00] bg-[#d4ff00] text-zinc-950">UPI / QR</button>
+            <button type="button" data-pay-method="COD" class="pay-method-btn py-2 px-2 rounded border border-zinc-700 bg-zinc-950 text-zinc-300">COD</button>
+            <button type="button" data-pay-method="ONLINE" class="pay-method-btn py-2 px-2 rounded border border-zinc-700 bg-zinc-950 text-zinc-300">Pay Link</button>
+          </div>
+
+          <div id="upi-box" class="text-xs text-zinc-300 space-y-2 pt-1">
+            <p>UPI ID: <strong id="display-upi-id" class="text-[#d4ff00]">m211911114@ybl</strong></p>
+            <div class="flex items-center gap-3">
+              <img id="display-upi-qr" src="assets/images/upi-qr.jpg" alt="PhonePe UPI QR Code" class="w-24 h-auto rounded border border-zinc-700 object-contain bg-zinc-950" onerror="this.style.display='none'" />
+              <div class="space-y-1.5">
+                <a id="upi-intent-link" href="#" class="block text-[11px] font-bold underline text-[#d4ff00]">Open UPI App &rarr;</a>
+                <p class="text-[11px] text-zinc-400">Scan QR in PhonePe / GPay / Paytm and share screenshot on WhatsApp.</p>
+              </div>
+            </div>
+          </div>
+
+          <p id="cod-box" class="hidden text-xs text-zinc-400 pt-1">
+            Cash on Delivery available for Apparel &amp; Equipment. Send your address on WhatsApp to confirm dispatch.
+          </p>
+
+          <div id="online-box" class="hidden text-xs text-zinc-300 pt-1">
+            <a id="payment-link-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-block underline text-[#d4ff00] font-bold">
+              Open Online Payment Page &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 mt-4 border-t border-zinc-800 space-y-3">
+        <div class="flex items-center justify-between text-sm">
+          <span class="text-zinc-400 uppercase font-semibold tracking-wider">Subtotal</span>
+          <span id="cart-subtotal" class="font-display text-2xl text-[#d4ff00]">&#8377;0</span>
+        </div>
+        <p id="shipping-note" class="text-xs text-zinc-400">Free delivery on orders &#8377;999+.</p>
+
+        <button id="whatsapp-checkout-btn" type="button" class="w-full bg-[#d4ff00] text-zinc-950 font-extrabold text-xs uppercase tracking-wider py-3.5 rounded-sm hover:bg-[#c2eb00] transition-colors">
+          Confirm Order on WhatsApp &gt;
+        </button>
+        <p id="checkout-feedback" class="text-xs text-[#d4ff00] font-semibold min-h-[1rem]"></p>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="bg-zinc-950 border-t border-zinc-800 py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+      <p>&copy; 2026 The Fit One (@Thefitone_14). All rights reserved.</p>
+      <a href="index.html" class="hover:text-[#d4ff00]">Back to Home</a>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
